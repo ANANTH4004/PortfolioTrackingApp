@@ -31,22 +31,19 @@ export class HomeComponent implements OnInit, OnDestroy{
   }
   }
 
-    ngOnInit() { 
+    ngOnInit() {
 
          this.http.get("https://api.coinlore.net/api/tickers/").subscribe(data =>{
           this.coinLists = data;
           console.log(data);
         });
-       
-    }
 
+    }
     showDialog() {
       this.ref = this.dialogService.open(SearchComponent,{
         header : "Search Coin",
         width : '50%',
-        contentStyle: { overflow: 'auto' },
-        baseZIndex: 10000,
-        maximizable: true
+        height:'80%'
       });
     }
 }

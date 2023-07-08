@@ -25,10 +25,12 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { DynamicDialogModule } from 'primeng/dynamicdialog';
 import { PrimeNGConfig } from 'primeng/api';
 import { VirtualScrollerModule } from 'primeng/virtualscroller';
+import { ListboxModule } from 'primeng/listbox';
 // Import other PrimeNG modules you need
 
 @NgModule({
   imports: [
+    ListboxModule,
     BrowserModule,
     BrowserAnimationsModule,
     ButtonModule,
@@ -42,9 +44,10 @@ import { VirtualScrollerModule } from 'primeng/virtualscroller';
     CheckboxModule,
     RadioButtonModule,
     InputTextareaModule,
-   
+    DropdownModule,
     SelectButtonModule,
     MultiSelectModule,
+    
     SliderModule,
     SpinnerModule,
     ProgressBarModule,
@@ -57,7 +60,7 @@ import { VirtualScrollerModule } from 'primeng/virtualscroller';
     // Import other PrimeNG modules you need
   ],
   exports: [
-    
+    ListboxModule,
     BrowserModule,
     BrowserAnimationsModule,
     ButtonModule,

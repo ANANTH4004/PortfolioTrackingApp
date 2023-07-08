@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
- 
+
 
   coinList : any;
   filteredCoin : any;
@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
     this.http.get("https://api.coinlore.net/api/tickers/").subscribe(data =>{
       this.coinList= data;
-      this.originalCoinList = this.coinList.data; 
+      this.originalCoinList = this.coinList.data;
       this.filteredCoin= data;
       console.log(data);
     });
@@ -26,18 +26,15 @@ export class SearchComponent implements OnInit {
 
   //coin Search function
   search():void{
-    if (this.coinName === '') {
-      this.filteredCoin.data = this.originalCoinList;
-    } else {
       this.filteredCoin.data = this.originalCoinList.filter((coin: { name: string }) =>
       coin.name.toLowerCase().startsWith(this.coinName.toLowerCase())
     );
-    }
+
   }
 
   // get the selected coin
   selectedCoin(event: any){
-    this.selectedcoin = event;
-    console.log(event);
+
+    console.log(this.selectedcoin);
   }
 }

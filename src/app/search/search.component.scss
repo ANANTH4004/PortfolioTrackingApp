@@ -1,18 +1,22 @@
-
 .p-inputtext {
-    border-color: rgb(21, 217, 34);
-    width: 200%;
-   
+  width:274%;
+  border-color: rgb(21, 217, 34);
 }
-.hoverable {
-    position: relative;
-    display: inline-block;
-  }
-  
-  
-  
-  .hoverable:hover::after {
-    border-left-color: red; /* Adjust the color of the arrow on hover */
-    background-color: aqua;
-  }
-  
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.fixed-input {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.scrollable-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-top: 1rem;
+}

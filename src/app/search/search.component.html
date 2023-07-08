@@ -1,14 +1,13 @@
-<div class="card flex flex-wrap justify-content-center gap-3">
-    <span class="p-input-icon-left">
+ 
+<div class="container">
+    <div class="fixed-input">
+      <span class="p-input-icon-left">
         <i class="pi pi-search"></i>
-        <input (keyup)="search()"  type="text" placeholder="Coin Name" pInputText [(ngModel)]="coinName"  />
-    </span>
-</div>
-<p-virtualScroller [value]="filteredCoin.data" class="border-1 surface-border border-round" [style]="{'width':'70%'}" scrollHeight="200px" [itemSize]="50">
-    <ng-template pTemplate="coin" let-coin  >
-        <div (click)="selectedCoin(coin)" style="padding-left: 20%;" class="flex align-items-center">
-            <span class="hoverable"> {{ coin.name }}</span>
-        </div>
-       
-    </ng-template>
-</p-virtualScroller>
+        <input (keyup)="search()" type="text" placeholder="Coin Name" pInputText [(ngModel)]="coinName" />
+      </span>
+    </div>
+
+    <div class="scrollable-list">
+      <p-listbox (onClick)="selectedCoin($event)" [options]="filteredCoin.data" [(ngModel)]="selectedcoin" optionLabel="name"></p-listbox>
+    </div>
+  </div>
