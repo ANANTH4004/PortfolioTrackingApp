@@ -1,8 +1,6 @@
 .p-inputtext {
-  width:274%;
   border-color: rgb(21, 217, 34);
 }
-
 .container {
   display: flex;
   flex-direction: column;
@@ -20,3 +18,12 @@
   overflow-y: auto;
   padding-top: 1rem;
 }
+.p-listbox-item {
+  font-weight: bold;
+  color: red;
+}
+.spacer {
+  margin-right: 5px;
+}
+
+

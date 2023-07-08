@@ -1,13 +1,20 @@
- 
+
 <div class="container">
     <div class="fixed-input">
-      <span class="p-input-icon-left">
+      <span class="p-input-icon-right">
         <i class="pi pi-search"></i>
         <input (keyup)="search()" type="text" placeholder="Coin Name" pInputText [(ngModel)]="coinName" />
       </span>
     </div>
 
     <div class="scrollable-list">
-      <p-listbox (onClick)="selectedCoin($event)" [options]="filteredCoin.data" [(ngModel)]="selectedcoin" optionLabel="name"></p-listbox>
+      <p-listbox  (onClick)="selectedCoin($event)" [options]="filteredCoin.data" [(ngModel)]="selectedcoin" optionLabel="name">
+        <ng-template let-coin pTemplate="coin">
+          <div class="flex align-items-center gap-2">
+               <div><span>{{ coin.name }} </span>  <span class="spacer"></span> <span>({{coin.symbol}})</span></div>
+
+          </div>
+      </ng-template>
+      </p-listbox>
     </div>
   </div>
