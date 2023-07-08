@@ -1,0 +1,57 @@
+[
+{
+    "coinId" : 1,
+    "coinName" : "Cardano",
+    "coinPrice" : 26,
+    "_1h" : "0.4%",
+    "_24h" : "0.4%",
+    "_7d" : "0.4%",
+    "coinMKT" : "$10,009,646,930",
+    "holdings" : 14,
+    "PNL" : 2
+}
+,{
+    "coinId" : 2,
+    "coinName" : "Bitcoin",
+    "coinPrice" : 26,
+    "_1h" : "0.4%",
+    "_24h" : "0.4%",
+    "_7d" : "0.4%",
+    "coinMKT" : "$10,009,646,930",
+    "holdings" : 14,
+    "PNL" : 2
+},
+{
+    "coinId" : 3,
+    "coinName" : "Ethereum",
+    "coinPrice" : 26,
+    "_1h" : "0.4%",
+    "_24h" : "0.4%",
+    "_7d" : "0.4%",
+    "coinMKT" : "$10,009,646,930",
+    "holdings" : 14,
+    "PNL" : 2
+},
+{
+    "coinId" : 4,
+    "coinName" : "Solana",
+    "coinPrice" : 26,
+    "_1h" : "0.4%",
+    "_24h" : "0.4%",
+    "_7d" : "0.4%",
+    "coinMKT" : "$10,009,646,930",
+    "holdings" : 14,
+    "PNL" : 2
+},
+{
+    "coinId" : 5,
+    "coinName" : "VeChain",
+    "coinPrice" : 26,
+    "_1h" : "0.4%",
+    "_24h" : "0.4%",
+    "_7d" : "0.4%",
+    "coinMKT" : "$10,009,646,930",
+    "holdings" : 14,
+    "PNL" : 2
+}
+]

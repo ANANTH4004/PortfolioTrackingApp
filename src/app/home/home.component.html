@@ -3,3 +3,57 @@
     <div class="flex py-2 justify-content-center">
     </div>
 </p-dialog>
+
+<br><br><br>
+<div class="mat-elevation-z8">
+    <table matSort mat-table [dataSource]="coinDetails">
+
+      <ng-container matColumnDef="coinId">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Coin ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.coinId}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="coinName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Coin Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.coinName}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="coinPrice">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Coin Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.coinPrice}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="_1h">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> 1h Change</th>
+        <td mat-cell *matCellDef="let element"> {{element._1h}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="_24h">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> 24h Change </th>
+        <td mat-cell *matCellDef="let element"> {{element._24h}} </td>
+      </ng-container>
+      <ng-container matColumnDef="_7d">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> 7d Change </th>
+        <td mat-cell *matCellDef="let element"> {{element._7d}} </td>
+      </ng-container>
+      <ng-container matColumnDef="coinMKT">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Market gap </th>
+        <td mat-cell *matCellDef="let element"> {{element.coinMKT}} </td>
+      </ng-container>
+       <ng-container matColumnDef="holdings">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Holdings </th>
+        <td mat-cell *matCellDef="let element"> {{element.holdings}} </td>
+      </ng-container>
+      <ng-container matColumnDef="PNL">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> PNL</th>
+        <td mat-cell *matCellDef="let element"> {{element.PNL}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns" ></tr>
+      <tr mat-row  *matRowDef="let row; columns: displayedColumns;" ></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[1,3,5]"
+                   showFirstLastButtons pageSize="3">
+    </mat-paginator>
+  </div>
