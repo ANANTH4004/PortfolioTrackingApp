@@ -40,9 +40,13 @@ export class HomeComponent implements OnInit, OnDestroy{
 
     }
     showDialog() {
+      let width = '50%';
+      if (window.innerWidth < 768) {
+        width = '90%';
+      }
       this.ref = this.dialogService.open(SearchComponent,{
         header : "Search Coin",
-        width : '50%',
+        width : width,
         height:'80%'
       });
     }

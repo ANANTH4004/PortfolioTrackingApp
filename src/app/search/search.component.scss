@@ -18,12 +18,19 @@
   overflow-y: auto;
   padding-top: 1rem;
 }
-.p-listbox-item {
-  font-weight: bold;
-  color: red;
-}
+
 .spacer {
   margin-right: 5px;
 }
 
-
+@media screen and (max-width: 767px) {
+ 
+  .p-inputtext {
+    width: 100%;
+    font-size: 13px;
+  }
+  .p-listbox-list{
+    font-size:3px;
+    color: rebeccapurple;
+  }
+}
