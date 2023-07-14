@@ -1,0 +1,14 @@
+<div class="search-bar">
+    <input matInput mat-dialog-title  type="text" placeholder="Search coins" [(ngModel)]="searchTerm"
+         (keyup)="filterPlace()" [matMenuTriggerFor]="suggestions">
+    <mat-menu #suggestions="matMenu"  class="menu-content">
+      <ng-template matMenuContent>
+        <mat-list mat-dialog-content role="list">
+          <mat-list-item *ngFor="let place of filteredData" (click)="selectedPlace(place)">
+            {{ place.city }}
+          </mat-list-item>
+        </mat-list>
+      </ng-template>
+    </mat-menu>
+  </div>
+

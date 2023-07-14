@@ -10,12 +10,14 @@ import { FormsModule } from '@angular/forms';
 import { PrimeNGModule } from './PrimeNg/primeNg';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './search/search.component';
+import { MaterialSearchComponent } from './material-search/material-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    MaterialSearchComponent
   ],
   imports: [
     PrimeNGModule,
