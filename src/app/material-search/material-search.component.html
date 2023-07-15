@@ -1,4 +1,4 @@
-<div class="search-bar">
+<!-- <div class="search-bar">
     <input matInput mat-dialog-title  type="text" placeholder="Search coins" [(ngModel)]="searchTerm"
          (keyup)="filterPlace()" [matMenuTriggerFor]="suggestions">
     <mat-menu #suggestions="matMenu"  class="menu-content">
@@ -11,4 +11,15 @@
       </ng-template>
     </mat-menu>
   </div>
-
+ -->
+ <mat-form-field  [color]="colorControl.value!">
+  <mat-label>Favorite food</mat-label>
+  <mat-select [formControl]="colorControl" name="food">
+    <mat-form-field class="example-full-width">
+      <input (keyup)="filterPlace()" [(ngModel)]="searchTerm" matInput />
+    </mat-form-field>
+    <mat-option *ngFor="let food of filteredData" [value]="food.city">
+      {{food.city}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

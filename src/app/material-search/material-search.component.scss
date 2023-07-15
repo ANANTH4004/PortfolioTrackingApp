@@ -8,12 +8,19 @@
 
 
 
-  input[type="text"] {
-    color: black;
+  // input[type="text"] {
+  //   color: black;
+  //   width: 100%;
+  //   padding: 10px;
+  //   font-size: 16px;
+  //  // border: 1px solid #ccc;
+  //   border-radius: 5px;
+
+  // }
+  .example-full-width {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
-   // border: 1px solid #ccc;
-    border-radius: 5px;
 
   }
+  .mat-input {
+    background-color: accent;
+ }
