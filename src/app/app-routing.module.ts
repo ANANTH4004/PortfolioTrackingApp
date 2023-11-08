@@ -4,7 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { MaterialSearchComponent } from './material-search/material-search.component';
 
 const routes: Routes = [
-  {path : '' , component:MaterialSearchComponent}
+  {path : '' , component:MaterialSearchComponent},
+  {path : 'ser' , component:SearchComponent}
 ];
 
 @NgModule({
